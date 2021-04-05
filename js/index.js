@@ -22,10 +22,17 @@ class GameObject {
 class BackgroundImage extends GameObject {
   constructor(x, y, width, height, img) {
     super(x, y, width, height, img);
+    this.speedX = -2
+  }
+  
+  updatePosition() {
+      this.x += this.speedX;
+      this.x %= canvas.width;
   }
 
   draw() {
     ctx.drawImage(this.img, this.x, 0, this.width, this.height);
+    ctx.drawImage(this.img, this.x - canvas.width, 0, this.width, this.height)
   }
 }
 
@@ -33,6 +40,8 @@ class Game {
   constructor(background, player) {
     this.background = background;
     this.player = player;
+    this.frames = 0;
+    this.animationID;
   }
 
   start = () => {
@@ -40,9 +49,13 @@ class Game {
   };
 
   updateGame = () => {
-    //this.clear();
+    this.clear();
 
+    this.background.updatePosition();
     this.background.draw();
+    this.player.draw();
+
+    this.animationID = requestAnimationFrame(this.updateGame);
   };
 
   clear = () => {
@@ -52,7 +65,7 @@ class Game {
 
 function startGame() {
   const bgImg = new Image();
-  bgImg.src = "./images/amsterdam_canal.png";
+  bgImg.src = "./images/amsterdam_canal3.png";
 
   const boatPlayer = new Image();
   boatPlayer.src = "./images/boat_player.png";
@@ -65,7 +78,7 @@ function startGame() {
     bgImg
   );
 
-  const player = new GameObject(canvas.width, 175 - 39, 162, 78, boatPlayer);
+  const player = new GameObject(canvas.width - 780, 390, 150, 100, boatPlayer);
   const game = new Game(backgroundImage, player);
 
   game.start();
