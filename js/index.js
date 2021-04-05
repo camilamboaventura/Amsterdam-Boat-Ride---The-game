@@ -72,8 +72,7 @@ function startGame() {
 }
 
 window.onload = () => {
-  startGame();
-  //   document.getElementById("start-button").onclick = () => {
-  //     startGame();
-  //   };
+    document.getElementById("start-button").onclick = () => {
+      startGame();
+    };
 };
