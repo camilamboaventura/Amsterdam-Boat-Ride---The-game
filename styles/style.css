@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+ h1 {
+     
+     font-size: 35px;
+     color: black;
+ }
+
+ #canvas-board {
+    border: 2px solid black;
+ }
+
+ .instruction {
+    font-size: 20px;
+ }
+
+ .arrows-img {
+     width: 200px;
+     height: auto;
+ }
+
+ body button {
+     font-size: 30px;
+     background-color: #870007;
+     color: #fff;
+ }
