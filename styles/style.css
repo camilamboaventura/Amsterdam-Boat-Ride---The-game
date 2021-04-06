@@ -1,5 +1,5 @@
 body {
- 
+    background-color: lightcoral;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -7,11 +7,11 @@ body {
   section {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
 .container {
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -21,7 +21,9 @@ body {
  h1 {
      font-size: 35px;
      color: black;
-     margin-bottom: 50px;
+     margin-bottom: 20px;
+     margin-top: 10px;
+     text-align: center;
  }
 
  #canvas-board {
@@ -30,23 +32,24 @@ body {
 
  .instruction {
     font-size: 20px;
+    text-align: center;
  }
 
  .arrows-img {
-     width: 200px;
+     width: 160px;
      height: auto;
  }
 
  body button {
-     font-size: 30px;
-     background-color: #870007;
+     font-size: 40px;
+     background-color: #4766f0;
      color: #fff;
  }
 
  .instruction {
-     margin-bottom: 60px;
+     margin-bottom: 20px;
  }
 
  .arrows-img {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
  }
