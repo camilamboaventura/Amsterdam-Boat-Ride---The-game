@@ -1,5 +1,5 @@
 body {
-    
+ 
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -7,18 +7,21 @@ body {
   section {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
 
-.instruction-info {
+.container {
+    width: 400px;
     display: flex;
     flex-direction: column;
-    
+    align-content: space-around;
+    justify-content: center;
 }
 
  h1 {
-     
      font-size: 35px;
      color: black;
+     margin-bottom: 50px;
  }
 
  #canvas-board {
@@ -38,4 +41,12 @@ body {
      font-size: 30px;
      background-color: #870007;
      color: #fff;
+ }
+
+ .instruction {
+     margin-bottom: 60px;
+ }
+
+ .arrows-img {
+    margin-bottom: 60px;
  }
