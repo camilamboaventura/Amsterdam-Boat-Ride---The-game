@@ -12,7 +12,19 @@ class GameObject {
     this.speedY = 0;
   }
 
-  updatePosition() {}
+  updatePosition() {
+    this.y += this.speedY;
+
+    if (this.y <= this.height + 160) {
+      this.y = this.height + 160;
+    }
+
+    if (this.y >= canvas.height - this.height) {
+      this.y = canvas.height - this.height;
+    }
+
+    this.x += this.speedX;
+  }
 
   draw() {
     ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
@@ -22,17 +34,17 @@ class GameObject {
 class BackgroundImage extends GameObject {
   constructor(x, y, width, height, img) {
     super(x, y, width, height, img);
-    this.speedX = -2
+    this.speedX = -2;
   }
-  
+
   updatePosition() {
-      this.x += this.speedX;
-      this.x %= canvas.width;
+    this.x += this.speedX;
+    this.x %= canvas.width;
   }
 
   draw() {
     ctx.drawImage(this.img, this.x, 0, this.width, this.height);
-    ctx.drawImage(this.img, this.x - canvas.width, 0, this.width, this.height)
+    ctx.drawImage(this.img, this.x + canvas.width, 0, this.width, this.height);
   }
 }
 
@@ -53,6 +65,8 @@ class Game {
 
     this.background.updatePosition();
     this.background.draw();
+
+    this.player.updatePosition();
     this.player.draw();
 
     this.animationID = requestAnimationFrame(this.updateGame);
@@ -68,7 +82,7 @@ function startGame() {
   bgImg.src = "./images/amsterdam_canal3.png";
 
   const boatPlayer = new Image();
-  boatPlayer.src = "./images/boat_player.png";
+  boatPlayer.src = "./images/boat_player2.png";
 
   const backgroundImage = new BackgroundImage(
     0,
@@ -78,14 +92,26 @@ function startGame() {
     bgImg
   );
 
-  const player = new GameObject(canvas.width - 780, 390, 150, 100, boatPlayer);
+  const player = new GameObject(canvas.width - 780, 390, 170, 100, boatPlayer);
   const game = new Game(backgroundImage, player);
 
   game.start();
+
+  document.addEventListener("keydown", (event) => {
+    if (event.code === "ArrowUp") {
+      game.player.speedY = -2;
+    } else if (event.code === "ArrowDown") {
+      game.player.speedY = 2;
+    }
+  });
+
+  document.addEventListener("keyup", () => {
+    game.player.speedY = 0;
+  });
 }
 
 window.onload = () => {
-    document.getElementById("start-button").onclick = () => {
-      startGame();
-    };
+  document.getElementById("start-button").onclick = () => {
+    startGame();
+  };
 };

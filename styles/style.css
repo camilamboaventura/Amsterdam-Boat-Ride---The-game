@@ -1,9 +1,19 @@
 body {
-    display: flex;
-    flex-direction: column;
+    
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+
+.instruction-info {
+    display: flex;
+    flex-direction: column;
+    
+}
 
  h1 {
      
