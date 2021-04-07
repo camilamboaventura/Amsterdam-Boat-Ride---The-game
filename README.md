@@ -8,3 +8,5 @@ Amsterdam Boat Ride is a fun game and very easy to play. The objective of the ga
 https://camilamboaventura.github.io/game-project/
 
 ## Link de acesso à apresentação
+
+https://docs.google.com/presentation/d/1iCwsKJ8-GklDmKS2M-Ngr2OFHLy8oE91c9S7YbjvAlM/edit?usp=sharing
