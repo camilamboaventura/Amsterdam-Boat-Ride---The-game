@@ -1,3 +1,9 @@
+
+// const reload = document.location.href()
+const container = document.querySelector(".container");
+const reloadButton = document.getElementById("resetButton");
+
+
 const canvas = document.getElementById("canvas-board");
 const ctx = canvas.getContext("2d");
 
@@ -185,11 +191,13 @@ class Game {
 
     ctx.fillStyle = "#9b5b4a";
     ctx.font = "bold 60px Verdana";
-    ctx.fillText("Game Over!", canvas.width / 3.8, 300);
+    ctx.fillText("Game Over!", canvas.width / 3.8, 230);
 
     ctx.font = "30px Verdana";
     ctx.fillStyle = "white";
-    ctx.fillText(`Your Final Score: ${this.score}`, canvas.width / 3.2, 400);
+    ctx.fillText(`Your Final Score: ${this.score}`, canvas.width / 3.2, 350);
+
+    reloadButton.style.display = "flex";
   }
 
   clear = () => {
@@ -230,6 +238,16 @@ const game = new Game(backgroundImage, player, boatObstacle);
 //carregando o jogo e iniciando com o botão start
 window.onload = () => {
   document.getElementById("start-button").onclick = () => {
+    container.style.display = "none";
     startGame();
+
   };
-};
+
+  reloadButton.onclick = () => {
+    document.location.reload(true);
+  }
+ };
+
+
+
+
