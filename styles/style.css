@@ -1,64 +1,75 @@
 body {
-    background-color: #d58564;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-
-  section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-.container {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: center;
-    margin-left: -200px;
-    margin-right: 40px;
+  background-color: #d58564;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
- h1 {
-     font-size: 35px;
-     color: black;
-     margin-bottom: 25px;
-     margin-top: 10px;
-     text-align: center;
-     color: #522a2e;
- }
+/* section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  } */
 
- #canvas-board {
-    border: 0px solid black;
-    background-image: url("/images/amsterdam_canal.png");
-    background-size: cover;
-    background-repeat: none;
- }
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
- .instruction {
-    font-size: 20px;
-    text-align: center;
-    color: #522a2e;
- }
+.absolute {
+  position: absolute;
+  top: 500px;
+  right: 540px;
+}
 
- .arrows-img {
-     width: 160px;
-     height: auto;
- }
+h1 {
+  display: inline-block;
+  font-size: 35px;
+  color: black;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  text-align: center;
+  color: #522a2e;
+  background-color: #ffc68c;
+  padding: 5px 5px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+}
 
- body button {
-     font-size: 30px;
-     background-color: #ffc68c;
-     border: none;
-     color: #9b5b4a;
-     font-weight: 800;
- }
+#canvas-board {
+  border: 0px solid black;
+  background-image: url("../images/amsterdam_canal.png");
+  background-size: cover;
+  background-repeat: none;
+}
 
- .instruction {
-     margin-bottom: 20px;
- }
+.instruction {
+  font-size: 20px;
+  text-align: center;
+  color: #522a2e;
+  width: 250px;
+  background-color: #ffc68c;
+  padding: 5px 5px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
 
- .arrows-img {
-    margin-bottom: 70px;
- }
+body button {
+  font-size: 30px;
+  background-color: #ffc68c;
+  border: none;
+  color: #522a2e;
+  font-weight: 800;
+  padding: 10px 10px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  margin-left: 50px;
+}

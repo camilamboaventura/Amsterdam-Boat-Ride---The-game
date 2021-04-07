@@ -79,7 +79,7 @@ class GameObject {
 class BackgroundImage extends GameObject {
   constructor(x, y, width, height, img) {
     super(x, y, width, height, img);
-    this.speedX = -3;
+    this.speedX = - 4;
   }
 
   updatePosition() {
@@ -131,12 +131,12 @@ class Game {
     this.frames++;
 
     for (let i = 0; i < this.obstacles.length; i++) {
-     this.obstacles[i].speedX = - 3;
+     this.obstacles[i].speedX = - 5;
         this.obstacles[i].updatePosition();
       this.obstacles[i].draw();
     }
 
-    if (this.frames % 260 === 0) {
+    if (this.frames % 100 === 0) {
       const randomObstacle = Math.floor(Math.random() * this.obstaclesImages.length)
       
         const originX = 750;
