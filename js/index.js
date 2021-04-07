@@ -180,16 +180,16 @@ class Game {
 
   gameOver() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "#ffc68c";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "red";
-    ctx.font = "60px Verdana";
-    ctx.fillText("Game Over!", canvas.width / 4, 200);
+    ctx.fillStyle = "#9b5b4a";
+    ctx.font = "bold 60px Verdana";
+    ctx.fillText("Game Over!", canvas.width / 3.8, 300);
 
     ctx.font = "30px Verdana";
     ctx.fillStyle = "white";
-    ctx.fillText(`Your Final Score: ${this.score}`, canvas.width / 3.5, 400);
+    ctx.fillText(`Your Final Score: ${this.score}`, canvas.width / 3.2, 400);
   }
 
   clear = () => {

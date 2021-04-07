@@ -1,5 +1,5 @@
 body {
-    background-color: lightcoral;
+    background-color: #d58564;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -7,32 +7,39 @@ body {
   section {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
 .container {
-    width: 300px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-content: space-around;
     justify-content: center;
+    margin-left: -200px;
+    margin-right: 40px;
 }
 
  h1 {
      font-size: 35px;
      color: black;
-     margin-bottom: 20px;
+     margin-bottom: 25px;
      margin-top: 10px;
      text-align: center;
+     color: #522a2e;
  }
 
  #canvas-board {
-    border: 2px solid black;
+    border: 0px solid black;
+    background-image: url("/images/amsterdam_canal.png");
+    background-size: cover;
+    background-repeat: none;
  }
 
  .instruction {
     font-size: 20px;
     text-align: center;
+    color: #522a2e;
  }
 
  .arrows-img {
@@ -41,9 +48,11 @@ body {
  }
 
  body button {
-     font-size: 40px;
-     background-color: #4766f0;
-     color: #fff;
+     font-size: 30px;
+     background-color: #ffc68c;
+     border: none;
+     color: #9b5b4a;
+     font-weight: 800;
  }
 
  .instruction {
