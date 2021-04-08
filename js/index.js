@@ -1,5 +1,12 @@
 
-// const reload = document.location.href()
+const gameMusic = new Audio();
+gameMusic.src = "./sounds/loveIsTheClass.mp3"
+gameMusic.volume = 0.1;
+
+const gameOverSound = new Audio();
+gameOverSound.src = "./sounds/gameOverSound.ogg";
+gameOverSound.volume = 0.1;
+
 const container = document.querySelector(".container");
 const reloadButton = document.getElementById("resetButton");
 
@@ -171,6 +178,8 @@ class Game {
     });
 
     if (crashed) {
+     gameMusic.pause()
+     gameOverSound.play()
 
       cancelAnimationFrame(this.animationID);
 
@@ -239,9 +248,12 @@ const game = new Game(backgroundImage, player, boatObstacle);
 window.onload = () => {
   document.getElementById("start-button").onclick = () => {
     container.style.display = "none";
+    gameMusic.play();
     startGame();
 
   };
+
+
 
   reloadButton.onclick = () => {
     document.location.reload(true);
