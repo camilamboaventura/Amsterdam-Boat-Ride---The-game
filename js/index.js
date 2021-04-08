@@ -24,14 +24,19 @@ boatPlayer.src = "./images/boat_player2.png";
 const boatObstacle = new Image();
 boatObstacle.src = "./images/boat_obstacle.png";
 
-
+const boatObstacleBlue = new Image();
+boatObstacleBlue.src = "./images/boat_obstacle2.png"
 
 const bather = new Image();
 bather.src = "./images/bather.png";
-// bather.width =
+
 
 const swan = new Image();
-swan.src = "./images/swan.png"
+swan.src = "./images/swan.png";
+
+
+const sup = new Image();
+sup.src = "./images/sup.png";
 
 
 //   const boatobstacle = new GameObject(canvas.width, canvas.height, 150, 60, obstacle1)
@@ -115,7 +120,7 @@ class Game {
     this.score = 0;
     this.animationID;
     this.obstacles = [];
-    this.obstaclesImages = [boatObstacle, bather, swan]
+    this.obstaclesImages = [boatObstacle, boatObstacleBlue, bather, swan, sup]
   }
 
   start = () => {
