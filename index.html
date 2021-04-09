@@ -10,34 +10,38 @@
 </head>
 
 <body>
+  
+    <div class="game-title">
+        <h1>Amsterdam Boat Ride</h1>
+    </div>
+
+    <div> 
+    <div class="container absolute">
+        <div>
+            <p class="instruction"><strong>Instructions: </strong>Use the up and down arrows to control the boat. Press
+                "START" to iniciate the game.
+            </p>
+        </div>
+        <div>
+            <button id="start-button">START</button>
+        </div>
+    </div>
     
+    <div class="canvas">
+       
+        <div id="game-board">
+            <canvas id="canvas-board" width="800" height="600"></canvas>
+        </div>
+    </div>
     
-
-        <div class="container absolute">
-            <div>
-                <p class="instruction"><strong>Instructions: </strong>Use the up and down arrows to control the boat. Press "START" to iniciate the game.
-                </p>
-            </div>
-            <div>
-                <button id="start-button">START</button>
-            </div>
-        </div>
-
-        <div class="canvas">
-            <div class="game-title">
-                <h1>Amsterdam Boat Ride</h1>
-            </div>
-            <div id="game-board">
-                <canvas id="canvas-board" width="800" height="600"></canvas>
-            </div>
-        </div>
-
-        <div class="reset">
-            <button id="resetButton">Try again!</button>
-        </div>
- 
+    <div class="reset">
+        <button id="resetButton">Try again!</button>
+    </div>
+    </div>
 
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
+
+

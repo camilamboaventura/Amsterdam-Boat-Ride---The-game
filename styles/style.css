@@ -2,14 +2,10 @@ body {
   background-color: #d58564;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-
-/* section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  } */
 
 .container {
   width: 400px;
@@ -21,16 +17,17 @@ body {
 
 .absolute {
   position: absolute;
-  top: 500px;
-  right: 540px;
+  top: 520px;
+  right: 550px;
+  
 }
 
 h1 {
   display: inline-block;
   font-size: 35px;
   color: black;
-  margin-bottom: 25px;
-  margin-top: 10px;
+  /* margin-bottom: 50px; */
+  margin-top: 30px;
   text-align: center;
   color: #522a2e;
   background-color: #ffc68c;
