@@ -5,21 +5,19 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-.container {
-  width: 400px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 
-.absolute {
-  position: absolute;
-  top: 520px;
-  right: 550px;
-  
+.container {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  background-image: url("../images/amsterdam_canal.png");
+  background-position: center;
+  background-size: cover;
 }
 
 h1 {
@@ -51,28 +49,34 @@ h1 {
   width: 250px;
   background-color: #ffc68c;
   padding: 5px 5px;
-  border: 0;
+  /* border: 0; */
   box-shadow: 0;
   border-radius: 5px;
-  margin-bottom: 20px;
-  margin-right: 50px;
+  /* margin-top: auto; */
+  /* margin-bottom: 20px;*/
+  margin-right: 4%;
 }
 
-body button {
+#start-button {
   font-size: 30px;
   background-color: #ffc68c;
   border: none;
   color: #522a2e;
   font-weight: 800;
-  padding: 10px 10px;
   border: 0;
   box-shadow: 0;
-  border-radius: 5px;
-  margin-left: 50px;
+  margin-left: 4%;
+}
+
+.gameIntro {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #resetButton {
-  display: none;
   font-size: 40px;
   background-color: #9b5b4a;
   border: none;
@@ -82,8 +86,31 @@ body button {
   border: 0;
   box-shadow: 0;
   border-radius: 5px;
-  margin-left: 50px;
-  position: absolute;
-  top: 550px;
-  right: 635px;
+  width: 300px;
+}
+
+.reset {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 600px;
+  background-color: #ffc68c;
+}
+
+.canvas {
+  display: none;
+}
+
+.reset h1 {
+  font-size: 60px;
+  color: #9b5b4a;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.reset h4 {
+  font-size: 30px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

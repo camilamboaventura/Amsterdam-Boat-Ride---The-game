@@ -6,42 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="shortcut icon" href="./images/boat_obstacle.png" type="image/x-icon">
     <title>Race Boat</title>
 </head>
 
 <body>
-  
+
     <div class="game-title">
         <h1>Amsterdam Boat Ride</h1>
     </div>
 
-    <div> 
-    <div class="container absolute">
-        <div>
-            <p class="instruction"><strong>Instructions: </strong>Use the up and down arrows to control the boat. Press
-                "START" to iniciate the game.
-            </p>
+    <div>
+        <div class="container">
+            <div class="gameIntro">
+                <p class="instruction"><strong>Instructions: </strong>Use the up and down arrows to control the boat.
+                    Press
+                    "START" to iniciate the game.
+                </p>
+                <button id="start-button">START</button>
+            </div>
+
         </div>
-        <div>
-            <button id="start-button">START</button>
+
+        <div class="canvas">
+
+            <div id="game-board">
+                <canvas id="canvas-board" width="800" height="600"></canvas>
+            </div>
         </div>
-    </div>
-    
-    <div class="canvas">
-       
-        <div id="game-board">
-            <canvas id="canvas-board" width="800" height="600"></canvas>
+
+        <div class="reset">
+            <h1>Game Over!</h1>
+            <h4 id="finalScore">Your Final Score: </h4>
+            <button id="resetButton">Try again!</button>
         </div>
-    </div>
-    
-    <div class="reset">
-        <button id="resetButton">Try again!</button>
-    </div>
     </div>
 
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
-
-
