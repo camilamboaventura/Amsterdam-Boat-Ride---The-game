@@ -1,5 +1,5 @@
 const gameMusic = new Audio();
-gameMusic.src = "./../sounds/loveIsTheClass.mp3";
+gameMusic.src = "./sounds/loveIsTheClass.mp3";
 gameMusic.volume = 0.1;
 
 const gameOverSound = new Audio();
